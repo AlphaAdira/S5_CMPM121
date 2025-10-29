@@ -1,0 +1,7 @@
+body.even {
+  background-color: lightblue;
+}
+
+body.odd {
+  background-color: pink;
+}

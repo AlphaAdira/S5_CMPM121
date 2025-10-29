@@ -1,4 +1,5 @@
 // CMPM 121 Smelly Code Activity
+import "./style.css";
 
 let counter = 0;
 
@@ -49,5 +50,5 @@ function updateCounter() {
   // Update the document title
   document.title = "Clicked " + counter;
   // Change the background color based on even/odd count
-  document.body.style.backgroundColor = counter % 2 ? "pink" : "lightblue";
+  document.body.className = counter % 2 ? "odd" : "even";
 }
