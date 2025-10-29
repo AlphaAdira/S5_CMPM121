@@ -1,9 +1,8 @@
 // CMPM 121 Smelly Code Activity
 
-// This variable keeps track of the counter
 let counter = 0;
 
-// These constants are for button IDs and heading text
+// button IDs and heading text
 const increment = "increment",
   counterDisplay = "counter",
   header = "CMPM 121 Project";
@@ -18,35 +17,27 @@ function setup() {
     <button id="reset">Reset</button>
   `;
 
-  // Get the increment button element from the document
+  // Get references to html elements
   const IncrementBtn = document.getElementById(increment);
-  // Get the decrement button element from the document
   const DecrementBtn = document.getElementById("dec");
-  // Get the reset button element from the document
   const ResetBtn = document.getElementById("reset");
-  // Get the counter span element from the document
   const counterElement = document.getElementById(counterDisplay);
 
   // Check if any element is missing, then exit the function
   if (!IncrementBtn || !DecrementBtn || !ResetBtn || !counterElement) return;
 
-  // Add click event to the increment button
+  // click events
   IncrementBtn.addEventListener("click", () => {
-    // Increase the counter by 1
     counter++;
     updateCounter();
   });
 
-  // Add click event to the decrement button
   DecrementBtn.addEventListener("click", () => {
-    // Decrease the counter by 1
     counter--;
     updateCounter();
   });
 
-  // Add click event to the reset button
   ResetBtn.addEventListener("click", () => {
-    // Reset the counter to 0
     counter = 0;
     updateCounter();
   });
