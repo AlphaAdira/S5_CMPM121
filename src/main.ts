@@ -13,13 +13,13 @@ function setup() {
     <h1>${header}</h1>
     <p>Counter: <span id="${counterDisplay}">0</span></p>
     <button id="${increment}">Click Me!</button>
-    <button id="dec">Decrement</button>
+    <button id="decrement">Decrement</button>
     <button id="reset">Reset</button>
   `;
 
   // Get references to html elements
   const IncrementBtn = document.getElementById(increment);
-  const DecrementBtn = document.getElementById("dec");
+  const DecrementBtn = document.getElementById("decrement");
   const ResetBtn = document.getElementById("reset");
   const counterElement = document.getElementById(counterDisplay);
 
@@ -52,9 +52,4 @@ function setup() {
   }
 }
 
-function start() {
-  // Call setup to initialize the UI
-  setup();
-}
-// Start the counter app
-start();
+setup();
